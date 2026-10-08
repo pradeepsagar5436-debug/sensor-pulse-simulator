@@ -1,0 +1,23 @@
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime data & H2 Database
+backend/data/
+*.db
+
+# Node dependencies & dist
+frontend/node_modules/
+frontend/dist/
+
+# Maven target
+backend/target/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

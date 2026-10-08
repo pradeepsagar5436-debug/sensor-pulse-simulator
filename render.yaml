@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: sensor-pulse-live
+    env: docker
+    plan: free
+    region: singapore
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: APP_JWT_SECRET
+        generateValue: true

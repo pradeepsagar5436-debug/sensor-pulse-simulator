@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  sensor-pulse-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sensor-pulse-live
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - APP_JWT_SECRET=404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+    volumes:
+      - sensor-data:/app/data
+    restart: always
+
+volumes:
+  sensor-data:
+    driver: local
